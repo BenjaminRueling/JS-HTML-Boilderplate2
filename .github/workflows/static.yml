@@ -41,3 +41,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          # Name of the branch containing the static content
+          branch: main
+          # Directory to deploy
+          folder: .
+          # Personal access token for GitHub Pages
+          token: ${{ secrets.GITHUB_TOKEN }}
